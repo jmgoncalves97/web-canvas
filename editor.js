@@ -1,6 +1,6 @@
 (function() {
     /**
-     * WebCanvas v0.2.7
+     * WebCanvas v0.2.8
      * A visual editor for any HTML page with a style panel.
      */
     class WebCanvas {
@@ -61,7 +61,6 @@
                     gap: 5px;
                     transition: right 0.3s ease-in-out; /* Add transition for smooth movement */
                 }
-                /* Move toolbar when panel is open */
                 body.${this.config.classes.panelOpen} #${this.config.ids.topToolbar} {
                     right: 315px; /* 300px panel width + 15px margin */
                 }
@@ -201,6 +200,14 @@
                 this.startLeft = parseFloat(this.draggedElement.style.left) || 0;
                 this.startTop = parseFloat(this.draggedElement.style.top) || 0;
                 this.initialRect = this.draggedElement.getBoundingClientRect();
+                
+                this.staticElementsCoords = Array.from(document.querySelectorAll(this.config.selectors.editable))
+                    .filter(el => el !== this.draggedElement)
+                    .map(el => {
+                        const r = el.getBoundingClientRect();
+                        return { left: r.left, right: r.right, top: r.top, bottom: r.bottom, centerX: r.left + r.width / 2, centerY: r.top + r.height / 2 };
+                    });
+
             } else if (!target) {
                 this._deselectAll();
             }
