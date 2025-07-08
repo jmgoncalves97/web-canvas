@@ -1,11 +1,12 @@
-# Web Canvas
+# WebCanvas
 
-A lightweight, dependency-free visual editor that adds drag-and-drop and inline text editing capabilities to any HTML page. Just include the script, and your page becomes a live canvas.
+A lightweight, dependency-free visual editor that adds a live style inspector, drag-and-drop, and inline text editing capabilities to any HTML page.
 
 ![Demo GIF showing the editor in action](https://i.imgur.com/gO2gZ9K.gif)
 
 ## ✨ Features
 
+-   **Style Inspector Panel**: Click any element to open a side panel and edit its CSS properties (color, size, spacing, position, etc.) in real-time.
 -   **Universal Drag & Drop**: Move any element on the page, regardless of its HTML structure.
 -   **Inline Text Editing**: Double-click on any text to edit it directly.
 -   **Smart Alignment Guides**: Red guides automatically appear to help you align elements with pixel-perfect precision.
