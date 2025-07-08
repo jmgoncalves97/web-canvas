@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Canvas v1.0</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 2rem;
+        }
+        .container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3, h4, h5, h6, p, div, img {
+            position: relative;
+        }
+        h1 {
+            text-align: center;
+        }
+        .subtitle {
+            text-align: center;
+            color: #555;
+            font-size: 1.1rem;
+            margin: -1rem 0 3rem 0;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        .feature-card i { /* Style for Font Awesome icons */
+            font-size: 40px; /* Adjust size as needed */
+            color: #fff; /* White color for the icon itself */
+            background-color: #3498db; /* Default background for the circle */
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            display: inline-flex; /* Use flexbox to center the icon */
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        /* Specific colors for each icon */
+        .feature-card:nth-child(1) i {
+            background-color: #3498db; /* Blue for rocket */
+        }
+        .feature-card:nth-child(2) i {
+            background-color: #e74c3c; /* Red for pencil */
+        }
+        .feature-card:nth-child(3) i {
+            background-color: #2ecc71; /* Green for disk */
+        }
+        .feature-card h3 {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Web Canvas</h1>
+        <p class="subtitle">A lightweight, dependency-free visual editor. Double-click to edit text, or drag and drop any element.</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-hand-rock"></i> <h3>Drag & Drop</h3>
+                <p>Easily rearrange the layout by moving any element on the page.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-pencil-alt"></i> <h3>Inline Text Editing</h3>
+                <p>Double-click on any text to edit it directly in place.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-save"></i> <h3>Export HTML</h3>
+                <p>Download a clean HTML file of your modified page with a single click.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./editor.js"></script>
+
+</body>
+</html>
